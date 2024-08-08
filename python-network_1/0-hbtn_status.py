@@ -1,13 +1,11 @@
 #!/usr/bin/python3
-"""Documented"""
+"""Fetches https://alu-intranet.hbtn.io/status using urllib"""
+
 import urllib.request
 
-url = 'https://intranet.hbtn.io/status'
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36',
-}
+url = 'https://alu-intranet.hbtn.io/status'
 
-req = urllib.request.Request(url, headers=headers)
+req = urllib.request.Request(url)
 with urllib.request.urlopen(req) as response:
     content = response.read()
     print("Body response:")
