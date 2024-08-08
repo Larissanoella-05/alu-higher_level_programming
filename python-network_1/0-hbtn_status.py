@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Fetches https://alu-intranet.hbtn.io/status using urllib"""
+"""Fetches http://0.0.0.0:5050/status using urllib"""
 
 import urllib.request
 
-url = 'https://alu-intranet.hbtn.io/status'
+url = 'http://0.0.0.0:5050/status'
 
 req = urllib.request.Request(url)
 with urllib.request.urlopen(req) as response:
@@ -12,3 +12,4 @@ with urllib.request.urlopen(req) as response:
     print("\t- type:", type(content))
     print("\t- content:", content)
     print("\t- utf8 content:", content.decode("utf-8"))
+
